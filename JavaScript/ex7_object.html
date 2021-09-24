@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>
+
+    </title>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers = {
+                "programmer":"egoing",
+                "designer":"leezche"
+            };
+            document.write("programmer: " + coworkers.programmer+"<br>");
+            document.write("designer: " + coworkers.designer+"<br>");
+            coworkers.bookkeeper = "duru";
+            document.write("bookkeeper: " + coworkers.bookkeeper+"<br>");
+            coworkers["data scientist"] = "taeho";
+            document.write("data scientist: " + coworkers["data scientist"]+"<br>");
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            for(var key in coworkers){
+                // cowokers의 key값들이 key로 하나하나 세팅이 됨
+                document.write(key + " : " + coworkers[key] + "<br>" );
+            }
+        </script>
+        <h2>Property & Method</h2>
+        <script>
+            coworkers.showAll = function(){
+                for(var key in this){
+                    // cowokers의 key값들이 key로 하나하나 세팅이 됨
+                    // 함수또한 객체의 속한 property이기 때문에 얘도 출력이 됨
+                    document.write(key + " : " + this[key] + "<br>" );
+                }   
+            }
+            coworkers.showAll();
+        </script>
+    </body>
+</head>
