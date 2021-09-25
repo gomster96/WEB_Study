@@ -1,0 +1,17 @@
+<!-- 폼이란 태그 내에서 입력한 것들을 action의 해당하는 경로로 보내줌  -->
+<!-- 여기서 method post로 전송할 시에 데이터를 전송할때 queryString에 남지 않도록 할 수 있다. -->
+<!-- 데이터를 가지고 올때는 GET을 하는 것 , 서버에 데이터를 수정이나 삭제할 때는 POST방법을 사용한다 -->
+<form action="http://localhost:3000/process_create" method="post">
+
+<p><input type="text" name="title"></p> 
+<p>
+    <!-- 여러줄을 입력할 수 있는것 -->
+    <textarea name="description"></textarea>
+</p>
+<p>
+    <!-- 전송버튼 -->
+    <input type="submit">
+</p>
+</form>
+
+<!--  이렇게 form으로 보내면 각각의 입력한 정보들을 queryString의 형태로 데이터를 전송해줌 -->
